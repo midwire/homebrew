@@ -1,10 +1,15 @@
-require "formula"
-
 class GitHooks < Formula
   homepage "https://github.com/icefox/git-hooks"
-  head "https://github.com/icefox/git-hooks.git"
+  url "https://github.com/icefox/git-hooks/archive/1.00.0.tar.gz"
+  version "1.00.0"
+  sha1 "60b6048b8442237914f6174113facb922a9a3cdd"
 
   def install
     bin.install "git-hooks"
+  end
+
+  test do
+    output = `cd $(brew --prefix); git hooks`.strip
+    assert_match /Listing User, Project, and Global hooks/, output
   end
 end
