@@ -1,7 +1,7 @@
 class GitHooks < Formula
   homepage "https://github.com/icefox/git-hooks"
   url "https://github.com/icefox/git-hooks/archive/1.00.0.tar.gz"
-  sha1 "60b6048b8442237914f6174113facb922a9a3cdd"
+  sha256 "8197ca1de975ff1f795a2b9cfcac1a6f7ee24276750c757eecf3bcb49b74808e"
 
   def install
     bin.install "git-hooks"
